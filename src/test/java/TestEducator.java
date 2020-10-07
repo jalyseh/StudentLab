@@ -1,28 +1,21 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestInstructor {
+public class TestEducator {
 
     @Test
     public void testImplementation(){
 
-        Instructor instructor = new Instructor(0,"");
+        Educator test = Educator.MIKAILA;
 
-        Assert.assertTrue(instructor instanceof Teacher);
-    }
-
-    @Test
-    public void testInheritance(){
-
-        Instructor instructor = new Instructor(0,"");
-        Assert.assertTrue(instructor instanceof Person);
+        Assert.assertTrue(test instanceof Teacher);
     }
 
     @Test
     public void testTeach(){
         Student student = new Student(1234, "Helen");
-        Instructor instructor = new Instructor(0,"");
-        instructor.teach(student,10);
+        Educator test = Educator.MIKAILA;
+        test.teach(student,10);
 
         double expected = student.getTotalStudyTime();
         double actual = 10.0;
@@ -41,8 +34,8 @@ public class TestInstructor {
         learners[0] = student1;
         learners[1] = student2;
 
-        Instructor instructor = new Instructor(0,"");
-        instructor.lecture(learners,20);
+        Educator test = Educator.MIKAILA;
+        test.lecture(learners,20);
 
         double expected = (student1.getTotalStudyTime() + student2.getTotalStudyTime()) / learners.length;
         double actual = 10.0;

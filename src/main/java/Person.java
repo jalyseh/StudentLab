@@ -3,6 +3,11 @@ public class Person {
     private final long id;
     private String name;
 
+    public Person(long id){
+
+        this.id = id;
+    }
+
     public Person(long id, String name) {
         this.id = id;
         this.name = name;
@@ -22,6 +27,9 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person: " + id + " , " + name;
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
